@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo 'Hi'
+#`echo "111111" | sudo killall killall -q naoqi-bin naoqi hal espeak lua luajit luajit2 screen`
+`echo "111111" | su darwin -c 'screen -dm -L -s /usr/bin/bash -S dcm lua ./run_dcm.lua'`
+#screen -dm -L -s /usr/bin/bash -S dcm  lua ./run_dcm.lua
+#lua run_dcm.lua &
+sleep 1
+echo 'made a screen'
+#screen -dm -L -s /usr/bin/bash -S buttons lua ./gmu_buttons.lua
+echo 'finished'
+

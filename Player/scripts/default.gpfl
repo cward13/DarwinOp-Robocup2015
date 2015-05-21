@@ -1,0 +1,29 @@
+#V4L2/CTRL/0.0.2
+APP{"libwebcam"}
+# control data
+#Brightness
+ID{0x00980900};CHK{0:255:1:128}=VAL{128}
+#Contrast
+ID{0x00980901};CHK{0:255:1:32}=VAL{32}
+#Saturation
+ID{0x00980902};CHK{0:255:1:28}=VAL{42}
+#White Balance Temperature, Auto
+ID{0x0098090c};CHK{0:1:1:1}=VAL{0}
+#Gain
+ID{0x00980913};CHK{0:255:1:0}=VAL{67}
+#Power Line Frequency
+ID{0x00980918};CHK{0:2:1:2}=VAL{0}
+#White Balance Temperature
+ID{0x0098091a};CHK{0:10000:10:4000}=VAL{70}
+#Sharpness
+ID{0x0098091b};CHK{0:255:1:191}=VAL{191}
+#Backlight Compensation
+ID{0x0098091c};CHK{0:1:1:1}=VAL{0}
+#Exposure (Absolute)
+ID{0x009a0902};CHK{1:10000:1:166}=VAL{538}
+#Exposure, Auto Priority
+ID{0x009a0903};CHK{0:1:1:0}=VAL{0}
+#Pan (Absolute)
+ID{0x009a0908};CHK{-36000:36000:3600:0}=VAL{0}
+#Tilt (Absolute)
+ID{0x009a0909};CHK{-36000:36000:3600:0}=VAL{0}

@@ -1,0 +1,40 @@
+How to create a lookup table (.raw):
+
+
+in the player folder, setup the darwin to take some pictures:
+cd ~/dev/merc/UPENN2013/Player
+sudo su
+screen -S dcm
+lua run_dcm.lua
+(now press ctrl+a, then ctrl+d to have it run int he background)
+screen -S player
+lua run_cognition.lua
+(now press ctrl+a, then ctrl+d again)
+
+lua run_monitor.lua
+
+Now to grab those images (use startx for these instructions):
+cd /usr/local/MATLAB/R2012a/bin
+sudo matlab
+in matlab:
+cd ~/dev/merc/UPENN2013/Tools/Matlab
+startup
+LoggerShm(19,1) 
+
+Wait 20 years for gui
+click "log" button.
+
+close gui, back to matlab. run
+startup
+colortable
+In the gui, load montage
+go to the logs directory, your log should be there with a timestamp. open it
+
+click the color you want to select on the radio buttons. 
+
+it is important to note that you should only click the buttons one at a time, as the client will queue them all up and take forever.
+
+then click that color. wait about 10 seconds per click.
+
+export LUT
+

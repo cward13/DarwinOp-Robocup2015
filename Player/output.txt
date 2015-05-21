@@ -1,0 +1,9 @@
+darwin56 has 14-bit firmware
+darwin56 walk parameters loaded
+param_k1_px:	1	3
+param_k1:	1	150
+param_a:	3	3
+param_b:	4	1
+UltraSound entry
+relax entry
+> MMo^C

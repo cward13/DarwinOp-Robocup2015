@@ -1,0 +1,152 @@
+Compiling Darwin OP Lua/C++ Libraries...
+
+make[1]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP'
+cd Body && make && cd /home/darwin/dev/UPENN2013/Lib/Platform/OP
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Body'
+cd Dynamixel && make && cd 
+make[3]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Body/Dynamixel'
+	 CXX lua_DynamixelPacket.o
+	 CC dynamixel.o
+	 LINK DynamixelPacket
+make[3]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Body/Dynamixel'
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Body'
+cd Camera && make && cd /home/darwin/dev/UPENN2013/Lib/Platform/OP
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Camera'
+	 CXX v4l2.o
+	 LINK OPCam
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Camera'
+cd Kinematics && make && cd /home/darwin/dev/UPENN2013/Lib/Platform/OP
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Kinematics'
+	 CXX lua_OPKinematics.o
+	 CXX OPKinematics.o
+	 CXX Transform.o
+	 LINK OPKinematics
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/Kinematics'
+cd GameControl && make && cd /home/darwin/dev/UPENN2013/Lib/Platform/OP
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/GameControl'
+g++ -shared -fpic -o OPGameControlReceiver.so  `pkg-config lua5.1 --libs` luaOPGameControlReceiver.o timeScalar.o  -lm
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP/GameControl'
+make[1]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Platform/OP'
+
+
+Compiling Utility Lua/C++ Libraries...
+
+make[1]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util'
+cd CArray && make && cd /home/darwin/dev/UPENN2013/Lib/Modules/Util
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/CArray'
+	 CXX lua_carray.o
+	 LINK carray
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/CArray'
+cd CUtil && make && cd /home/darwin/dev/UPENN2013/Lib/Modules/Util
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/CUtil'
+	 CXX lua_cutil.o
+	 LINK cutil
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/CUtil'
+cd Unix && make && cd /home/darwin/dev/UPENN2013/Lib/Modules/Util
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/Unix'
+	 LINK unix
+	 LINK stty
+	 LINK getch
+	 LINK signal
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/Unix'
+cd Shm && make && cd /home/darwin/dev/UPENN2013/Lib/Modules/Util
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/Shm'
+	 CXX lua_shm.o
+	 LINK shm
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/Shm'
+cd Z && make && cd /home/darwin/dev/UPENN2013/Lib/Modules/Util
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/Z'
+	 LINK Z
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util/Z'
+make[1]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Util'
+
+
+Setting up Utility Lua/C++ Libraries...
+
+`Modules/Util/CArray/test-carray.lua' -> `../Player/Lib/test-carray.lua'
+`Modules/Util/CArray/carray.so' -> `../Player/Lib/carray.so'
+`Modules/Util/Shm/test_shm.lua' -> `../Player/Lib/test_shm.lua'
+`Modules/Util/Shm/shm.so' -> `../Player/Lib/shm.so'
+`Modules/Util/Unix/test_unix.lua' -> `../Player/Lib/test_unix.lua'
+`Modules/Util/Unix/signal.so' -> `../Player/Lib/signal.so'
+`Modules/Util/Unix/unix.so' -> `../Player/Lib/unix.so'
+`Modules/Util/Unix/stty.so' -> `../Player/Lib/stty.so'
+`Modules/Util/Unix/getch.so' -> `../Player/Lib/getch.so'
+`Modules/Util/Jpeg/test_jpeg.lua' -> `../Player/Lib/test_jpeg.lua'
+`Modules/Util/CUtil/ta2s.lua' -> `../Player/Lib/ta2s.lua'
+`Modules/Util/CUtil/cutil.so' -> `../Player/Lib/cutil.so'
+`Modules/Util/CUtil/test_cutil.lua' -> `../Player/Lib/test_cutil.lua'
+`Modules/Util/Z/test_z.lua' -> `../Player/Lib/test_z.lua'
+`Modules/Util/Z/Z.so' -> `../Player/Lib/Z.so'
+
+
+Compiling Image Processing Lua/C++ Libraries...
+
+make[1]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/ImageProc'
+make -f Makefile.local
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/ImageProc'
+	 CXX lua_ImageProc.o
+	 CXX color_count.o
+	 CXX block_bitor.o
+	 CXX ConnectRegions.o
+	 CXX RegionProps.o
+	 CXX RadonTransform.o
+	 CXX lua_color_stats.o
+	 CXX lua_color_count.o
+	 CXX lua_colorlut_gen.o
+	 CXX lua_connect_regions.o
+	 CXX lua_goal_posts.o
+	 CXX lua_robots.o
+	 CXX lua_field_lines.o
+	 CXX lua_field_spots.o
+	 CXX lua_field_occupancy.o
+	 LINK ImageProc
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/ImageProc'
+make[1]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/ImageProc'
+
+
+Setting up Image Processing Lua/C++ Libraries...
+
+`Modules/ImageProc/test_imageproc.lua' -> `../Player/Lib/test_imageproc.lua'
+`Modules/ImageProc/ImageProc.so' -> `../Player/Lib/ImageProc.so'
+
+
+Compiling Communication Lua/C++ Libraries...
+
+make[1]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Comm'
+make -f Makefile.local
+make[2]: Entering directory `/home/darwin/dev/UPENN2013/Lib/Modules/Comm'
+g++ -shared -fpic -o Comm.so  `pkg-config lua5.1 --libs` luaComm.o  -lm
+make[2]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Comm'
+make[1]: Leaving directory `/home/darwin/dev/UPENN2013/Lib/Modules/Comm'
+
+
+Setting up Communication Lua/C++ Libraries...
+
+`Modules/Comm/Comm.so' -> `../Player/Lib/Comm.so'
+
+
+Setting up Darwin OP Lua/C++ Libraries...
+
+`Platform/OP/GameControl/OPGameControl.lua' -> `../Player/Lib/OPGameControl.lua'
+`Platform/OP/GameControl/OPGameControlReceiver.so' -> `../Player/Lib/OPGameControlReceiver.so'
+`Platform/OP/Body/check_dcm.lua' -> `../Player/Lib/check_dcm.lua'
+`Platform/OP/Body/vector.lua' -> `../Player/Lib/vector.lua'
+`Platform/OP/Body/Dynamixel/DynamixelPacket.so' -> `../Player/Lib/DynamixelPacket.so'
+`Platform/OP/Body/Dynamixel/changeID.lua' -> `../Player/Lib/changeID.lua'
+`Platform/OP/Body/Dynamixel/test_dynamixel.lua' -> `../Player/Lib/test_dynamixel.lua'
+`Platform/OP/Body/Dynamixel/Dynamixel.lua' -> `../Player/Lib/Dynamixel.lua'
+`Platform/OP/Body/Dynamixel/move2position.lua' -> `../Player/Lib/move2position.lua'
+`Platform/OP/Body/dcm.lua' -> `../Player/Lib/dcm.lua'
+`Platform/OP/Body/HPCommManager.lua' -> `../Player/Lib/HPCommManager.lua'
+`Platform/OP/Body/OPCommManager.lua' -> `../Player/Lib/OPCommManager.lua'
+`Platform/OP/Body/OPBody.lua' -> `../Player/Lib/OPBody.lua'
+`Platform/OP/OverheadCam/test_camera.lua' -> `../Player/Lib/test_camera.lua'
+`Platform/OP/Camera/test_camera.lua' -> `../Player/Lib/test_camera.lua'
+`Platform/OP/Camera/OPCam.so' -> `../Player/Lib/OPCam.so'
+`Platform/OP/Kinematics/test_kine.lua' -> `../Player/Lib/test_kine.lua'
+`Platform/OP/Kinematics/vector.lua' -> `../Player/Lib/vector.lua'
+`Platform/OP/Kinematics/OPKinematics.so' -> `../Player/Lib/OPKinematics.so'
+`Platform/OP/Kinematics/Transform.lua' -> `../Player/Lib/Transform.lua'
+
+
